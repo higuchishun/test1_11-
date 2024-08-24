@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style2.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Reggae+One&display=swap" rel="stylesheet">
+
+  <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+
+  <title>第二ミッション</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Reggae One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+    h1{
+      font-size: 48px;
+      padding: 40px 0;
+    }
+    h2{
+      text-align: center;
+      font-size: 32px;
+    }
+    p{
+      padding: 40px 0;
+    }
+    #mission-form p{
+      text-align: center;
+      padding: 0 0;
+    }
+    #preview {
+      display: block;
+      margin: 0 auto; /* 左右のマージンを自動で設定して中央配置 */
+      max-width: 40%; /* 幅を最大まで広げる */
+      height: auto; /* 高さを自動調整 */
+    }
+    #last-item{
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: #FAFAD2;/*背景色*/
+    }
+    button {
+      padding: 0 30px;
+      margin: 50px 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>残食家の鬼音響（玉ねぎ）<div class = "star-level"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div></h1>
+  <img src = "img/賞味期限切れ.png" alt = "poteto">
+  <p>秘伝のアイテムがそろった！そしたら、あとは”ヒルナティック・チーズの秘宝”を作るだけだ！</p>
+  <div id="last-item">
+  <h2>ルナティック・チーズの秘宝</h2>
+  <div class="form-container">
+    <form id="mission-form" enctype="multipart/form-data">
+      <p>完成形</p>
+      <img id="preview" class="preview">
+      <input type="file" name="test" onchange="previewFile(this);" required>
+    </form>
+  </div>
+  </div>
+  <button onclick="completeMission()">撃破</button>
+
+  <script>
+    let fileCounter = 0;
+
+    function previewFile(input) {
+      const fileData = new FileReader();
+      fileData.onload = function() {
+        const preview = document.getElementById('preview');
+        preview.src = fileData.result;
+        fileCounter++;
+      };
+      fileData.readAsDataURL(input.files[0]);
+    }
+
+    function completeMission() {
+      if (fileCounter === 1) {
+        window.location.href = 'mission1_1.html';
+      } else {
+        alert('料理を完成させろ');
+      }
+    }
+  </script>
+</body>
+</html>
+
