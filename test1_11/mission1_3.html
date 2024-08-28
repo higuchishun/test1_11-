@@ -357,7 +357,7 @@ function goToSecondMission() {
   const allChecked = Array.from(document.querySelectorAll('.check-item')).every(item => item.checked);
   if (allChecked) {
     updateIngredientQuantities(); // 次のページに行く前に数量を更新
-    window.location.href = 'mission2.html'; // 次のページへ移動
+    window.location.href = 'mission2_3.html'; // 次のページへ移動
   } else {
     alert('すべてのチェックボックスがチェックされていません。まだ未完成です。');
   }
