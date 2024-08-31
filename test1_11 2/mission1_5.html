@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一ミッション</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Reggae+One&display=swap" rel="stylesheet">
+
+  <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Reggae One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .container {
+      width: 100%;
+      max-width: 1000px;
+    }
+    i{
+      padding-right: 18px;
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      margin-right: 20px;
+      width: 100%;
+    }
+    #preview {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    button {
+      padding: 0 30px;
+      margin: 50px 100px;
+    }
+    #output {
+      margin-top: 20px;
+    }
+    h1{
+      font-size: 48px;
+      padding: 40px 0;
+    }
+    h2{
+      text-align: center;
+      font-size: 32px;
+    }
+    h3{
+      text-align: center;
+    }
+    p{
+      padding: 40px 0;
+    }
+    .checklist-content{
+      display: flex;
+    }
+    .item1{
+      margin-right: 48px;
+    }
+    .item2{
+      margin-left: 48px;
+    }
+    .item3{
+      margin-left: 48px;
+    }
+    #checklist{
+      background-color: #FAFAD2;
+      padding: 0 30px 30px 30px;
+    }
+    .check-item{
+      font-size: 32px;
+    }
+    .checklist-content label{
+      font-size: 24px;
+    }
+
+
+    .accordion-003 {
+    max-width: 500px;
+    margin-bottom: 7px;
+    border-bottom: 2px solid #d0d0d0;
+}
+
+.accordion-003 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion-003 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-003 summary::before,
+.accordion-003 summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #000000b3;
+    content: '';
+}
+
+.accordion-003 summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.accordion-003 summary::after {
+    transition: rotate .3s;
+}
+
+.accordion-003[open] summary::after {
+    rotate: 90deg;
+}
+
+.accordion-003 p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    color: #050505;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-003[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+.container label{
+  padding-top: 40px;
+}
+  </style>
+</head>
+<body>
+<h1>腐敗の焔竜芋（じゃがいも）<div class = "star-level"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div></h1>
+<img src = "img/賞味期限切れ.png" alt = "poteto">
+<p>賞味期限切れだからといって、食材を捨てている焔竜芋やろうを発見！<br>竜っぽくもないのに、なぜか「竜」という名前が付いている。気に食わん！<br>この腐敗の焔竜芋を倒すためには、秘伝のアイテムを集めて、”ヒーローズベイクドグラタン（ポテトグラタン） "を作らねばならない！<br>果たして勇者たちは、食材の力でこの挑戦を乗り越えることができるのか！</p>
+<div id="checklist">
+  <h2>ヒーローズベイクドグラタン（ポテトグラタン）</h2>
+  <div class = "checklist-content">
+  <div class = "item1">
+  <label><input type="checkbox" class="check-item" data-name="じゃがいも" data-quantity="1"> じゃがいも - 1個</label><br>
+  <label><input type="checkbox" class="check-item" data-name="ベーコン" data-quantity="1"> ベーコン - 1枚</label><br>
+  </div>
+  <div class = "item2">
+  <label><input type="checkbox" class="check-item" data-name="玉ねぎ" data-quantity="0.5"> 玉ねぎ - 0.5個</label><br>
+  <label><input type="checkbox" class="check-item" data-name="バター" data-quantity="15"> バター - 15g</label><br>
+  </div>
+  <div class = "item3">
+    <label><input type="checkbox" class="check-item" data-name="アスパラ" data-quantity="1"> アスパラ - 1本</label><br>
+    <label><input type="checkbox" class="check-item" data-name="チーズ" data-quantity="50"> チーズ - 50g</label><br>
+    </div>
+</div>
+<details class="accordion-003">
+  <summary><div><i class="fa-solid fa-key"></i>キーアイテム</div></summary>
+  <p>コンソメ…小さじ1<br>小麦粉…大さじ1<br>牛乳…200ml<br>塩・こしょう…適量<br>パン粉…適量</p>
+</details>
+<!-- <details class="accordion-003">
+  <summary>アコーディオンのデザイン</summary>
+  <p>下線だけのシンプルなアコーディオンメニュー。クセがなくどんなサイトでも使いやすいのが特徴です。</p>
+</details> -->
+</div>
+
+<div class="container">
+  <h3>秘伝のアイテムボックス</h3>
+  <form id="ingredient-form">
+    <label for="name">食材の名前:</label>
+    <select id="name" name="name" required>
+      <option value="" disabled selected>選択してください</option>
+      
+      <option value="ごはん">ごはん</option>
+      <option value="うどん">うどん</option>
+      <option value="パスタ">パスタ</option>
+      <option value="鶏もも">鶏もも</option>
+      <option value="牛肉">牛肉</option>
+      <option value="ベーコン">ベーコン</option>
+      <option value="卵">卵</option>
+      <option value="長ネギ">長ネギ</option>
+      <option value="なす">なす</option>
+      <option value="トマト">トマト</option>
+      <option value="玉ねぎ">玉ねぎ</option>
+      <option value="じゃがいも">じゃがいも</option>
+      <option value="にんじん">にんじん</option>
+      <option value="きゃべつ">きゃべつ</option>
+      <option value="アスパラ">アスパラ</option>
+      <option value="ごぼう">ごぼう</option>
+      <option value="紅ショウガ">紅ショウガ</option>
+      <option value="パプリカ">パプリカ</option>
+      <option value="ピーマン">ピーマン</option>
+      <option value="もやし">もやし</option>
+      <option value="にんにく">にんにく</option>
+      <option value="里芋">里芋</option>
+      <option value="しめじ">しめじ</option>
+      <option value="椎茸">椎茸</option>
+      <option value="こんにゃく">こんにゃく</option>
+      <option value="バター">バター</option>
+      <option value="チーズ">チーズ</option>
+      
+      
+      
+    </select>
+
+    <label for="quantity">個数（個数/グラム/合/本）:</label>
+    <input type="number" id="quantity" name="quantity" step = "0.5" required>
+
+    <label for="photo">写真:</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required>
+
+    <button type="submit">登録</button>
+  </form>
+  <div id="output"></div>
+
+  <button id="mission-button" style="display:none;" onclick="goToSecondMission()">次へ進む</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  updateUsedIngredients();
+  displayStoredIngredients();
+  loadChecklistState();
+  autoCheckIngredients(); // 自動的にチェックボックスをチェック
+  checkMissionButton(); // 初期ロード時にもチェック
+});
+
+document.getElementById('ingredient-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const nameSelect = document.getElementById('name');
+  const name = nameSelect.options[nameSelect.selectedIndex].value;
+  const quantity = parseFloat(document.getElementById('quantity').value); // parseFloat を使用
+  const photo = document.getElementById('photo').files[0];
+
+  const now = new Date();
+  const formattedDate = now.toLocaleString();
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const ingredient = {
+      name: name,
+      quantity: quantity,
+      date: formattedDate,
+      photo: e.target.result
+    };
+
+    saveIngredient(ingredient);
+    document.getElementById('ingredient-form').reset();
+    checkMissionButton(); // 登録後にもチェック
+  };
+
+  reader.readAsDataURL(photo);
+});
+
+
+function saveIngredient(ingredient) {
+  let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  const existingIngredient = ingredients.find(ing => ing.name === ingredient.name);
+
+  if (existingIngredient) {
+    existingIngredient.quantity = parseFloat((existingIngredient.quantity + ingredient.quantity).toFixed(1)); // Ensure quantity is rounded to one decimal place
+    existingIngredient.date = ingredient.date;
+    existingIngredient.photo = ingredient.photo;
+  } else {
+    ingredient.quantity = parseFloat(ingredient.quantity.toFixed(1)); // Round to one decimal place
+    ingredients.push(ingredient);
+  }
+
+  localStorage.setItem('ingredients', JSON.stringify(ingredients));
+
+  document.getElementById('output').innerHTML = '';
+  displayStoredIngredients();
+  updateChecklist(ingredient.name);
+}
+
+function displayStoredIngredients() {
+  const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  ingredients.forEach(ingredient => {
+    addIngredientToOutput(ingredient);
+  });
+}
+
+function addIngredientToOutput(ingredient) {
+  const outputItem = document.createElement('div');
+  outputItem.classList.add('output-item');
+
+  outputItem.innerHTML =
+    `<strong>食材の名前:</strong> ${ingredient.name}<br>
+     <strong>個数:</strong> ${ingredient.quantity.toFixed(1)}<br>
+     <strong>登録した日時:</strong> ${ingredient.date}<br>
+     <img src="${ingredient.photo}" alt="写真"><br>
+     <button class="delete-button" data-name="${ingredient.name}">削除</button>`;
+
+  document.getElementById('output').appendChild(outputItem);
+
+  outputItem.querySelector('.delete-button').addEventListener('click', function() {
+    deleteIngredient(ingredient.name);
+    const checklistItem = document.querySelector(`.check-item[data-name="${ingredient.name}"]`);
+    if (checklistItem) {
+      checklistItem.checked = false;
+      localStorage.setItem(ingredient.name, JSON.stringify(false));
+      checkMissionButton();
+    }
+  });
+}
+
+
+function deleteIngredient(name) {
+  let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  ingredients = ingredients.filter(ingredient => ingredient.name !== name);
+  localStorage.setItem('ingredients', JSON.stringify(ingredients));
+  document.getElementById('output').innerHTML = '';
+  displayStoredIngredients();
+
+  // 削除後にチェックボックスの状態を更新
+  checkMissionButton();
+}
+
+function loadChecklistState() {
+  const checklistItems = document.querySelectorAll('.check-item');
+  checklistItems.forEach(item => {
+    const itemName = item.dataset.name;
+    item.checked = JSON.parse(localStorage.getItem(itemName)) || false;
+    item.addEventListener('change', function() {
+      localStorage.setItem(itemName, JSON.stringify(item.checked));
+      checkMissionButton(); // チェック状態が変わったときにボタンをチェック
+    });
+  });
+}
+
+function checkMissionButton() {
+  const allChecked = Array.from(document.querySelectorAll('.check-item')).every(item => item.checked);
+  const missionButton = document.getElementById('mission-button');
+  if (allChecked) {
+    missionButton.style.display = 'block';
+  } else {
+    missionButton.style.display = 'none';
+  }
+}
+
+function goToSecondMission() {
+  const allChecked = Array.from(document.querySelectorAll('.check-item')).every(item => item.checked);
+  if (allChecked) {
+    updateIngredientQuantities(); // 次のページに行く前に数量を更新
+    window.location.href = 'mission2_5.html'; // 次のページへ移動
+  } else {
+    alert('すべてのチェックボックスがチェックされていません。まだ未完成です。');
+  }
+}
+
+function updateUsedIngredients() {
+  const usedIngredients = JSON.parse(localStorage.getItem('usedIngredients')) || [];
+  if (usedIngredients.length > 0) {
+    let ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+    usedIngredients.forEach(used => {
+      const ingredient = ingredients.find(ing => ing.name === used.name);
+      if (ingredient) {
+        ingredient.quantity -= used.quantity;
+        if (ingredient.quantity <= 0) {
+          ingredients = ingredients.filter(ing => ing.name !== used.name);
+        }
+      }
+    });
+    localStorage.setItem('ingredients', JSON.stringify(ingredients));
+    localStorage.removeItem('usedIngredients');
+    document.getElementById('output').innerHTML = '';
+    displayStoredIngredients();
+  }
+}
+
+function autoCheckIngredients() {
+  const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  const checklistItems = document.querySelectorAll('.check-item');
+
+  ingredients.forEach(ingredient => {
+    const matchingItem = Array.from(checklistItems).find(item => item.dataset.name === ingredient.name);
+    if (matchingItem) {
+      const requiredQuantity = parseInt(matchingItem.dataset.quantity, 10);
+      if (ingredient.quantity >= requiredQuantity) {
+        matchingItem.checked = true;
+      } else {
+        matchingItem.checked = false;
+      }
+      localStorage.setItem(ingredient.name, JSON.stringify(matchingItem.checked));
+    }
+  });
+
+  // チェックボックスが変更されたときのリスナーを追加
+  checklistItems.forEach(item => {
+    item.addEventListener('change', function() {
+      checkMissionButton(); // チェック状態が変わったときにボタンをチェック
+    });
+  });
+
+  checkMissionButton(); // 初期ロード時にもチェック
+}
+
+function updateIngredientQuantities() {
+  const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  const checklistItems = document.querySelectorAll('.check-item');
+
+  checklistItems.forEach(item => {
+    if (item.checked) {
+      const ingredientName = item.dataset.name;
+      const requiredQuantity = parseInt(item.dataset.quantity, 10);
+      const ingredient = ingredients.find(ing => ing.name === ingredientName);
+
+      if (ingredient) {
+        ingredient.quantity -= requiredQuantity;
+        if (ingredient.quantity <= 0) {
+          const index = ingredients.indexOf(ingredient);
+          ingredients.splice(index, 1);
+          item.checked = false; // 個数がなくなった場合、チェックを外す
+          localStorage.setItem(ingredientName, JSON.stringify(false)); // ローカルストレージのチェック状態も更新
+        }
+      }
+    }
+  });
+
+  localStorage.setItem('ingredients', JSON.stringify(ingredients));
+  checkMissionButton(); // 更新後にもボタンの表示状態をチェック
+}
+
+function updateChecklist(ingredientName) {
+  const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
+  const checklistItem = document.querySelector(`.check-item[data-name="${ingredientName}"]`);
+
+  if (checklistItem) {
+    const totalQuantity = ingredients
+      .filter(ing => ing.name === ingredientName)
+      .reduce((sum, ing) => sum + ing.quantity, 0);
+
+    const requiredQuantity = parseInt(checklistItem.dataset.quantity, 10);
+    checklistItem.checked = totalQuantity >= requiredQuantity;
+
+    localStorage.setItem(ingredientName, JSON.stringify(checklistItem.checked));
+  }
+}
+</script>
+</body>
+</html>
